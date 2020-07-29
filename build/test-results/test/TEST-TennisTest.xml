@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TennisTest" tests="33" skipped="0" failures="0" errors="0" timestamp="2020-07-29T13:13:34" hostname="PSLL32481" time="0.007">
+<testsuite name="TennisTest" tests="33" skipped="0" failures="0" errors="0" timestamp="2020-07-29T14:45:17" hostname="PSLL32481" time="0.007">
   <properties/>
   <testcase name="checkAllScoresTennisGame1[0]" classname="TennisTest" time="0.001"/>
   <testcase name="checkAllScoresTennisGame1[1]" classname="TennisTest" time="0.0"/>
@@ -28,7 +28,7 @@
   <testcase name="checkAllScoresTennisGame1[24]" classname="TennisTest" time="0.0"/>
   <testcase name="checkAllScoresTennisGame1[25]" classname="TennisTest" time="0.0"/>
   <testcase name="checkAllScoresTennisGame1[26]" classname="TennisTest" time="0.0"/>
-  <testcase name="checkAllScoresTennisGame1[27]" classname="TennisTest" time="0.0"/>
+  <testcase name="checkAllScoresTennisGame1[27]" classname="TennisTest" time="0.001"/>
   <testcase name="checkAllScoresTennisGame1[28]" classname="TennisTest" time="0.0"/>
   <testcase name="checkAllScoresTennisGame1[29]" classname="TennisTest" time="0.0"/>
   <testcase name="checkAllScoresTennisGame1[30]" classname="TennisTest" time="0.0"/>
