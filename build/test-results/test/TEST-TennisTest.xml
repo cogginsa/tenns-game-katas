@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TennisTest" tests="33" skipped="0" failures="0" errors="0" timestamp="2020-07-29T13:13:34" hostname="PSLL32481" time="0.007">
+<testsuite name="TennisTest" tests="33" skipped="0" failures="0" errors="0" timestamp="2020-08-05T12:53:29" hostname="PSLL32481" time="0.038">
   <properties/>
-  <testcase name="checkAllScoresTennisGame1[0]" classname="TennisTest" time="0.001"/>
+  <testcase name="checkAllScoresTennisGame1[0]" classname="TennisTest" time="0.002"/>
   <testcase name="checkAllScoresTennisGame1[1]" classname="TennisTest" time="0.0"/>
   <testcase name="checkAllScoresTennisGame1[2]" classname="TennisTest" time="0.0"/>
   <testcase name="checkAllScoresTennisGame1[3]" classname="TennisTest" time="0.0"/>
@@ -15,13 +15,13 @@
   <testcase name="checkAllScoresTennisGame1[11]" classname="TennisTest" time="0.0"/>
   <testcase name="checkAllScoresTennisGame1[12]" classname="TennisTest" time="0.0"/>
   <testcase name="checkAllScoresTennisGame1[13]" classname="TennisTest" time="0.0"/>
-  <testcase name="checkAllScoresTennisGame1[14]" classname="TennisTest" time="0.0"/>
-  <testcase name="checkAllScoresTennisGame1[15]" classname="TennisTest" time="0.001"/>
-  <testcase name="checkAllScoresTennisGame1[16]" classname="TennisTest" time="0.0"/>
+  <testcase name="checkAllScoresTennisGame1[14]" classname="TennisTest" time="0.001"/>
+  <testcase name="checkAllScoresTennisGame1[15]" classname="TennisTest" time="0.011"/>
+  <testcase name="checkAllScoresTennisGame1[16]" classname="TennisTest" time="0.001"/>
   <testcase name="checkAllScoresTennisGame1[17]" classname="TennisTest" time="0.0"/>
   <testcase name="checkAllScoresTennisGame1[18]" classname="TennisTest" time="0.0"/>
   <testcase name="checkAllScoresTennisGame1[19]" classname="TennisTest" time="0.0"/>
-  <testcase name="checkAllScoresTennisGame1[20]" classname="TennisTest" time="0.0"/>
+  <testcase name="checkAllScoresTennisGame1[20]" classname="TennisTest" time="0.001"/>
   <testcase name="checkAllScoresTennisGame1[21]" classname="TennisTest" time="0.0"/>
   <testcase name="checkAllScoresTennisGame1[22]" classname="TennisTest" time="0.0"/>
   <testcase name="checkAllScoresTennisGame1[23]" classname="TennisTest" time="0.0"/>
