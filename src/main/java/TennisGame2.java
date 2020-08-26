@@ -15,67 +15,32 @@ public class TennisGame2 implements TennisGame
 
     public String getScore(){
         String score = "";
-        if (P1point == P2point && P1point < 4)
-        {
-            if (P1point==0)
-                score = "Love";
-            if (P1point==1)
-                score = "Fifteen";
-            if (P1point==2)
-                score = "Thirty";
-            score += "-All";
-        }
-        if (P1point==P2point && P1point>=3)
+        if (arePointsEqual() && P1point>=3){
             score = "Deuce";
+        } else if (arePointsEqual() && isGameStillInPlay()){
+            score = getTiedScore(P1point);
+        }
 
-        if (P1point > 0 && P2point==0)
+        if (isAdvantageP1())
         {
-            if (P1point==1)
-                P1res = "Fifteen";
-            if (P1point==2)
-                P1res = "Thirty";
-            if (P1point==3)
-                P1res = "Forty";
+            P1res = getScoreString(P1point);
 
             P2res = "Love";
-            score = P1res + "-" + P2res;
+            score = joinScores();
         }
-        if (P2point > 0 && P1point==0)
-        {
-            if (P2point==1)
-                P2res = "Fifteen";
-            if (P2point==2)
-                P2res = "Thirty";
-            if (P2point==3)
-                P2res = "Forty";
 
+        if (isAdvantageP2())
+        {
+            P2res = getScoreString(P2point);
             P1res = "Love";
-            score = P1res + "-" + P2res;
+            score = joinScores();
         }
 
-        if (P1point>P2point && P1point < 4)
+        if (P1point!=P2point && isGameStillInPlay())
         {
-            if (P1point==2)
-                P1res="Thirty";
-            if (P1point==3)
-                P1res="Forty";
-            if (P2point==1)
-                P2res="Fifteen";
-            if (P2point==2)
-                P2res="Thirty";
-            score = P1res + "-" + P2res;
-        }
-        if (P2point>P1point && P2point < 4)
-        {
-            if (P2point==2)
-                P2res="Thirty";
-            if (P2point==3)
-                P2res="Forty";
-            if (P1point==1)
-                P1res="Fifteen";
-            if (P1point==2)
-                P1res="Thirty";
-            score = P1res + "-" + P2res;
+            P1res = getScoreString(P1point);
+            P2res = getScoreString(P2point);
+            score = joinScores();
         }
 
         if (P1point > P2point && P2point >= 3)
@@ -88,33 +53,19 @@ public class TennisGame2 implements TennisGame
             score = "Advantage player2";
         }
 
-        if (P1point>=4 && P2point>=0 && (P1point-P2point)>=2)
-        {
-            score = "Win for player1";
+        if(isEndOfGame()){
+            if (isAheadBy2PointsOrMore(P1point, P2point))
+            {
+                score = "Win for player1";
+            }
+            else if (isAheadBy2PointsOrMore(P2point, P1point))
+            {
+                score = "Win for player2";
+            }
         }
-        if (P2point>=4 && P1point>=0 && (P2point-P1point)>=2)
-        {
-            score = "Win for player2";
-        }
+
+
         return score;
-    }
-
-    public void SetP1Score(int number){
-
-        for (int i = 0; i < number; i++)
-        {
-            P1Score();
-        }
-
-    }
-
-    public void SetP2Score(int number){
-
-        for (int i = 0; i < number; i++)
-        {
-            P2Score();
-        }
-
     }
 
     public void P1Score(){
@@ -123,6 +74,53 @@ public class TennisGame2 implements TennisGame
 
     public void P2Score(){
         P2point++;
+    }
+
+    private boolean arePointsEqual(){
+        return P1point == P2point;
+    }
+
+    private boolean isGameStillInPlay(){
+        return P1point < 4 && P2point < 4;
+    }
+
+    private boolean isAdvantageP1(){
+        return P1point > 0 && P2point==0;
+    }
+
+    private boolean isAdvantageP2(){
+        return P2point > 0 && P1point==0;
+    }
+
+    private boolean isEndOfGame(){
+        return  P2point >= 4 || P1point >= 4;
+    }
+
+    private boolean isAheadBy2PointsOrMore(int point1, int point2){
+        return (point1-point2)>=2;
+    }
+
+    private String joinScores(){
+        return P1res + "-" + P2res;
+    }
+
+
+    private String getScoreString(int playerPoints){
+        switch (playerPoints) {
+            case 0:
+                return "Love";
+            case 1:
+                return "Fifteen";
+            case 2:
+                return "Thirty";
+            case 3:
+                return "Forty";
+        }
+        return "";
+    }
+
+    private String getTiedScore(int playerPoints){
+        return getScoreString(playerPoints) + "-All";
     }
 
     public void wonPoint(String player) {
